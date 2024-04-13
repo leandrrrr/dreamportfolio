@@ -1,0 +1,27 @@
+
+.header {
+  border: 2px solid #100e27; /* Couleur de la bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur */
+  background-color: #100e27; /* Couleur de fond */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+  width: 80%; /* Largeur de la groupbox */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  position: relative; /* Positionnement relatif */
+  max-width: 70%; /* Taille maximale de l'image à la largeur de la groupbox */
+  height: auto; /* Hauteur automatique pour maintenir les proportions */
+  width: 185px; /* Largeur maximale de l'image à la largeur de la groupbox */
+  height: 50%;
+
+}
+.buttonHead{
+  font-weight: bold;
+  font-size: 110%;
+  color: white;
+  align-items: center;
+}
+
+.buttonHead:hover{
+  color:#5CBCFF;
+}

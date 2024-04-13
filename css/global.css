@@ -1,0 +1,161 @@
+
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Assurez-vous que l'arrière-plan reste derrière le contenu */
+}
+
+
+table {
+  border-collapse: separate; /* Séparer les bordures des cellules */
+  border-spacing: 30px; /* Espacement entre les lignes et les colonnes */
+}
+
+
+
+#headerimg {
+  display: none;
+}
+
+hr {
+  display: none;
+}
+#footer {
+  display: none;
+}
+
+
+
+
+
+a + a {
+  margin-left: 15%; /* ou tout autre valeur d'espacement que vous souhaitez */
+}
+.h2-with-svg {
+  display: flex;
+  align-items: center;
+  color:white;
+  font-family: oxanium;
+
+
+}
+.svg-wrapper {
+  width: 24%; /* Réduire la largeur selon vos besoins */
+  margin: 0 5px; /* Ajuster la marge selon vos besoins */
+}
+.svg-wrapper svg {
+  display: block;
+}
+h2{
+  text-align: center;
+}
+
+/*ordi*/
+.groupbox {
+  border: 2px solid #007bff; /* Couleur de la bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur */
+  background-color: #f8f9fa; /* Couleur de fond */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: 100%; /* Largeur de la groupbox */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  position: relative; /* Positionnement relatif */
+}
+
+.groupbox::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* Distance entre le haut de la groupbox et la couleur */
+  left: 0;
+  width: 100%;
+  height: 8px; /* Hauteur de la couleur */
+  background-color: #007bff; /* Couleur sur le top */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.groupboxLogo {
+  border: 2px solid #007bff; /* Couleur de la bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur */
+  background-color: #f8f9fa; /* Couleur de fond */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: 70%; /* Largeur de la groupbox */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  position: relative; /* Positionnement relatif */
+  max-width: 70%; /* Taille maximale de l'image à la largeur de la groupbox */
+  height: auto; /* Hauteur automatique pour maintenir les proportions */
+  width: 135px; /* Largeur maximale de l'image à la largeur de la groupbox */
+  height: 70%;
+}
+
+
+
+
+.groupboxMobile {
+  border: 2px solid #007bff; /* Couleur de la bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur */
+  background-color: #f8f9fa; /* Couleur de fond */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: 100%; /* Largeur de la groupbox */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  position: relative; /* Positionnement relatif */
+}
+
+.groupboxMobile::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* Distance entre le haut de la groupbox et la couleur */
+  left: 0;
+  width: 100%;
+  height: 8px; /* Hauteur de la couleur */
+  background-color: #007bff; /* Couleur sur le top */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.groupboxLogoMobile {
+  border: 2px solid #007bff; /* Couleur de la bordure */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur */
+  background-color: #f8f9fa; /* Couleur de fond */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: 70%; /* Largeur de la groupbox */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+  position: relative; /* Positionnement relatif */
+  max-width: 70%; /* Taille maximale de l'image à la largeur de la groupbox */
+  height: auto; /* Hauteur automatique pour maintenir les proportions */
+  width: 105px; /* Largeur maximale de l'image à la largeur de la groupbox */
+  height: 70%;
+}
+
+@media only screen and (max-width: 900px) {
+  .ordi {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .mobile {
+    display: none;
+  }
+}
+
