@@ -3,6 +3,8 @@
 
 
 
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -83,6 +85,19 @@ html, body {
 .arrow-down:hover {
   transform: scale(0.9) rotate(270deg) translateX(2%) translateY(-40%) ;
 }
+
+
+arrow-hitbox-down{
+  width: 100px; /* Largeur de la zone de déclenchement */
+  height: 100px;
+
+}
+
+
+
+
+
+
 
 
 .container {
