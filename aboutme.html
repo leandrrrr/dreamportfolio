@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+
+
+  <script src="jquery3.3.1.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-TY48IGHgsIyZeQgWXEZvoBhigCv+Jv16+7XMkdPvj5fq51RrgZq/da9YsZJQ3NcVWllR9KpBtj/Y5Gm0U1j+Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover-min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/tilt.js@2.5.1/dest/tilt.jquery.min.js"></script>
+<div class="card" id="card">
+  <div class="front">Front Content</div>
+</div>
+
+
+<script>
+  const card = document.getElementById('card');
+
+  document.addEventListener('mousemove', (e) => {
+    const xOffset = (e.clientX / window.innerWidth - 0.5) * 40;
+    const yOffset = (e.clientY / window.innerHeight - 0.5) * 40;
+    card.style.transform = `rotateY(${xOffset}deg) rotateX(${-yOffset}deg) translate(-50%, -50%)`;
+  });
+
+
+</script>
+<style>.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  backface-visibility: hidden;
+}
+
+</style>
+
+</body>

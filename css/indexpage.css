@@ -1,0 +1,32 @@
+#aboutme-iframe{
+  display: none;
+  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  top: 0; /* Ajustez ces valeurs pour positionner l'iframe où vous le souhaitez */
+  left: 0;
+  width: 100%; /* Ajustez la largeur et la hauteur selon vos besoins */
+  height: 100%;
+  border: none; /* Supprime la bordure de l'iframe */
+  z-index: 9900;
+  opacity: 0%;
+  position: fixed;
+  transform: translateY(100%); /* Déplacer l'iframe en bas de son conteneur */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#popupCloser{
+  display: none;
+  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  top: 5%; /* Ajustez ces valeurs pour positionner l'iframe où vous le souhaitez */
+  left: 4%;
+  border: none; /* Supprime la bordure de l'iframe */
+  z-index: 9902;
+}
+
+
+  *,
+  *::before,
+  *::after {
+    background-image: url('/img/background.png');
+
+
+  }

@@ -187,7 +187,9 @@ textarea {
   font-family: Oxanium;
   cursor: url('/img/cursor-2.png'), auto !important;
 }
-
+body{
+  cursor: url('/img/cursor-2.png'), auto !important;
+}
 
 @media print {
   *,
