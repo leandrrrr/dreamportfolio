@@ -8,7 +8,6 @@
   border: none; /* Supprime la bordure de l'iframe */
   z-index: 9900;
   opacity: 0%;
-  position: fixed;
   transform: translateY(100%); /* Déplacer l'iframe en bas de son conteneur */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -39,6 +38,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 9802;
+
 }
 
 .arrow-hitbox-left {
@@ -60,3 +60,8 @@
   transform: translateY(-75%) rotate(180deg);
   z-index: 9802;
 }
+.box {
+  position: absolute;
+  width: 100%;
+}
+

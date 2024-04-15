@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-TY48IGHgsIyZeQgWXEZvoBhigCv+Jv16+7XMkdPvj5fq51RrgZq/da9YsZJQ3NcVWllR9KpBtj/Y5Gm0U1j+Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover-min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -32,43 +34,36 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="js-tilt" data-tilt>
+  <div class="container ">
 
-<script src="https://cdn.jsdelivr.net/npm/tilt.js@2.5.1/dest/tilt.jquery.min.js"></script>
-<div class="card" id="card">
-  <div class="front">Front Content</div>
-</div>
-
-
+    <center>
+      <div class="box" style="font-size: 280%"><center>Léandre<br>Junior Web Developer</center>
+        <a class="button is-medium" href="https://github.com/leandrrrr">
+      <span class="icon">
+        <img src="./img/github-logo.png">
+      </span>
+          <span>GitHub</span>
+        </a>
+        <button class="button is-medium" onclick="window.location.href='https://www.linkedin.com/in/leandre-mascher-72b034273/'">
+        <span class="icon">
+        <img src="./img/linkedin-logo.png">
+    </span>
+          <span>Linkedin</span>
+        </button></div>
+    </center>
+  </div>
 <script>
-  const card = document.getElementById('card');
-
-  document.addEventListener('mousemove', (e) => {
-    const xOffset = (e.clientX / window.innerWidth - 0.5) * 40;
-    const yOffset = (e.clientY / window.innerHeight - 0.5) * 40;
-    card.style.transform = `rotateY(${xOffset}deg) rotateX(${-yOffset}deg) translate(-50%, -50%)`;
-  });
-
-
+  $('.js-tilt').tilt({
+    scale: 1.2
+  })
 </script>
-<style>.card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease-out;
-}
-
-.front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-  backface-visibility: hidden;
-}
-
-</style>
 
 </body>

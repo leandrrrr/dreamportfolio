@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const box = document.querySelector('.box');
 
@@ -9,3 +11,5 @@ document.addEventListener("DOMContentLoaded", function() {
     box.style.top = mouseY/70 + 'px';
   });
 });
+
+

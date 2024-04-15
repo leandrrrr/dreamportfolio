@@ -103,10 +103,6 @@ body:has(.arrow-hitbox-left:hover) .arrow-left
   margin-top: 20%;
 }
 
-.box {
-  position: absolute;
-  width: 100%;
-}
 
 .content {
   background-image: url('../img/background.png');

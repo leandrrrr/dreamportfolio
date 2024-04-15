@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-TY48IGHgsIyZeQgWXEZvoBhigCv+Jv16+7XMkdPvj5fq51RrgZq/da9YsZJQ3NcVWllR9KpBtj/Y5Gm0U1j+Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover-min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -86,27 +90,34 @@
 <table>
   <tr>
     <td style="width: 20%"></td>
+
+    <!-- center block with my name (Léandre Junior Web Developer) -->
     <td style="width: 60%">
 <div class="container ">
-
   <center>
     <div class="box" style="font-size: 280%"><center>Léandre<br>Junior Web Developer</center>
-      <a class="button is-medium" href="https://github.com/leandrrrr">
+      <div class="js-tilt" data-tilt style="display: inline-block;">
+      <a class="button is-medium" href="https://github.com/leandrrrr" >
       <span class="icon">
         <img src="./img/github-logo.png">
       </span>
       <span>GitHub</span>
     </a>
+
+      </div>
+      <div class="js-tilt" data-tilt style="display: inline-block;">
       <button class="button is-medium" onclick="window.location.href='https://www.linkedin.com/in/leandre-mascher-72b034273/'">
         <span class="icon">
         <img src="./img/linkedin-logo.png">
     </span>
       <span>Linkedin</span>
-    </button></div>
+    </button>
+      </div>
+      </div>
   </center>
-
-
 </div>
+
+
     </td>
     <td style="width: 20%"></td>
   </tr>
@@ -127,6 +138,14 @@
 
 
 <script>
+
+  $('.js-tilt').tilt({
+    scale: 1.1,
+    glare: true,
+    maxGlare: .6
+  })
+
+
 
   function openAboutMe() {
     var iframe = document.getElementById("aboutme-iframe");
