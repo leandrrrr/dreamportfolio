@@ -30,3 +30,27 @@
 
 
   }
+
+.arrow-hitbox-down {
+  width: 80%;
+  height: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9802;
+}
+
+.arrow-left {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-75%);
+}
+
+.arrow-right {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-75%) rotate(180deg);
+}

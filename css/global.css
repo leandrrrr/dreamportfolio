@@ -2,20 +2,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
 
-.glassy-style{
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.6px);
-  -webkit-backdrop-filter: blur(8.6px);
-  border: 1px solid rgba(255, 255, 255, 1);
-}
-
-.button-round{
-  border-radius: 100%;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -74,6 +60,7 @@ html, body {
 .arrow-left,
 .arrow-right,
 .arrow-down {
+  z-index: 9800;
   width: 6%; /* Taille réduite */
 }
 
@@ -87,22 +74,20 @@ html, body {
   transition: transform 0.3s ease-in-out;
 }
 
-.arrow-right:hover {
-  transform: scale(0.9) rotate(180deg) translateY(80%);
+
+body:has(.arrow-hitbox-down:hover) .arrow-down
+{
+  transform: scale(0.8) rotate(270deg) translateX(2%) translateY(-45%);
 }
-.arrow-left:hover {
-  transform: scale(0.9) translateY(-80%) ;
+body:has(.arrow-hitbox-right:hover) .arrow-right
+{
+  transform: scale(0.8) rotate(180deg) translateY(80%);
 }
-.arrow-down:hover {
-  transform: scale(0.9) rotate(270deg) translateX(2%) translateY(-40%) ;
+body:has(.arrow-hitbox-left:hover) .arrow-left
+{
+  transform: scale(0.8) translateY(-80%) ;
 }
 
-
-arrow-hitbox-down{
-  width: 100px; /* Largeur de la zone de déclenchement */
-  height: 100px;
-
-}
 
 
 
