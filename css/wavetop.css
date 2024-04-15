@@ -2,15 +2,15 @@
   height: 0%;
   width:100%;
   position:absolute;
-  bottom:0;
+  top:0;
   left:0;
   background: deeppink;
 }
 
 .wave {
-  background: url(../img/wave.svg) repeat-x;
+  background: url(../img/wavetop.svg) repeat-x;
   position: absolute;
-  top: -158px;
+  top: -50px;
   width: 6400px;
   height: 198px;
   animation: wave 9s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
@@ -19,7 +19,7 @@
 }
 
 .wave:nth-of-type(2) {
-  top: -135px;
+  top: -20px;
   animation: wave 9s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 35%;
 }
