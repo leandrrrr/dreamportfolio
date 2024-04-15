@@ -32,8 +32,8 @@
   }
 
 .arrow-hitbox-down {
-  width: 80%;
-  height: 20%;
+  width: 75%;
+  height: 25%;
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -41,16 +41,22 @@
   z-index: 9802;
 }
 
-.arrow-left {
+.arrow-hitbox-left {
+  width: 25%;
+  height: 100%;
   position: fixed;
   top: 50%;
   left: 0;
   transform: translateY(-75%);
+  z-index: 9802;
 }
 
-.arrow-right {
+.arrow-hitbox-right {
+  width: 25%;
+  height: 100%;
   position: fixed;
   top: 50%;
   right: 0;
   transform: translateY(-75%) rotate(180deg);
+  z-index: 9802;
 }

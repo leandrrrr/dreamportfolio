@@ -81,11 +81,11 @@ body:has(.arrow-hitbox-down:hover) .arrow-down
 }
 body:has(.arrow-hitbox-right:hover) .arrow-right
 {
-  transform: scale(0.8) rotate(180deg) translateY(80%);
+  transform: scale(0.8) rotate(180deg) translateY(96%);
 }
 body:has(.arrow-hitbox-left:hover) .arrow-left
 {
-  transform: scale(0.8) translateY(-80%) ;
+  transform: scale(0.8) translateY(-93%) ;
 }
 
 
