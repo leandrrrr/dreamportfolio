@@ -42,7 +42,7 @@
 }
 
 .arrow-hitbox-left {
-  width: 25%;
+  width: 20%;
   height: 100%;
   position: fixed;
   top: 50%;
@@ -52,7 +52,7 @@
 }
 
 .arrow-hitbox-right {
-  width: 25%;
+  width: 20%;
   height: 100%;
   position: fixed;
   top: 50%;
