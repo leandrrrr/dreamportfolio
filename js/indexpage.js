@@ -8,11 +8,12 @@ function openAboutMe() {
   iframe.style.display = "block";
   closer.style.display = "block";
 
-  // Déclenche la transition en mettant l'opacité à 1 et en réinitialisant la transformation
+// Déclenche la transition en mettant l'opacité à 1 avec un délai plus long
   setTimeout(function() {
     iframe.style.opacity = "1";
     iframe.style.transform = "translateY(0)"; // Réinitialiser la transformation
-  }, 100); // Un délai court pour permettre au navigateur de calculer la transition
+  }, 120); // Un délai court pour permettre au navigateur de calculer la transition
+
 }
 
 function closePopup() {
@@ -27,5 +28,5 @@ function closePopup() {
   // Retarde la fermeture de l'iframe pour permettre à la transition de se produire
   setTimeout(function() {
     iframe.style.display = "none";
-  }, 500); // Utilisez une valeur légèrement plus grande que la durée de la transition (500ms dans cet exemple)
+  }, 200); // Utilisez une valeur légèrement plus grande que la durée de la transition (500ms dans cet exemple)
 }

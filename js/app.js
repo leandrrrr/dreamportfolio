@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
-    box.style.left = mouseX/70 + 'px';
-    box.style.top = mouseY/70 + 'px';
+    box.style.left = mouseX/40 + 'px';
+    box.style.top = mouseY/40 + 'px';
   });
 });
 
