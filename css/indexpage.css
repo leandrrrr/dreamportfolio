@@ -12,6 +12,33 @@
   transition: opacity 0.25s ease, transform 0.1s ease;
 }
 
+#hobby-iframe{
+  display: none;
+  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  top: 0; /* Ajustez ces valeurs pour positionner l'iframe où vous le souhaitez */
+  left: 0;
+  width: 100%; /* Ajustez la largeur et la hauteur selon vos besoins */
+  height: 100%;
+  border: none; /* Supprime la bordure de l'iframe */
+  z-index: 9900;
+  opacity: 0%;
+  transform: translateX(-100%); /* Déplacer l'iframe en bas de son conteneur */
+  transition: opacity 0.25s ease, transform 0.1s ease;
+}
+#projet-iframe{
+  display: none;
+  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  top: 0; /* Ajustez ces valeurs pour positionner l'iframe où vous le souhaitez */
+  left: 0;
+  width: 100%; /* Ajustez la largeur et la hauteur selon vos besoins */
+  height: 100%;
+  border: none; /* Supprime la bordure de l'iframe */
+  z-index: 9900;
+  opacity: 0%;
+  transform: translateX(100%); /* Déplacer l'iframe en bas de son conteneur */
+  transition: opacity 0.25s ease, transform 0.1s ease;
+}
+
 #popupCloser{
   display: none;
   position: fixed; /* Position fixe pour que l'iframe reste toujours visible */

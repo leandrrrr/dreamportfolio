@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="/js/particles.js"></script>
+  <script src="/js/app.js"></script>
+
+
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -70,8 +74,17 @@
 <br>
 <br>
 
-  <section class="hero is-medium" style="background: radial-gradient(circle at bottom right, #e1bdf5, #A1BEFF);
-">
+<style>
+  #particles-js{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at bottom right, #e1bdf5, #A1BEFF);
+
+  }
+</style>
+
+<div >
+  <section class="hero is-medium" id="particles-js">
     <div class="hero-body">
       <p class="title is-white has-text-primary-100">Competency</p>
       <br>
@@ -136,6 +149,7 @@
   </table>
     </div>
   </section>
+</div>
 
 <script>
   $(document).ready(function(){
@@ -154,7 +168,6 @@
   });
 
 </script>
-
 
 
 

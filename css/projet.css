@@ -1,0 +1,7 @@
+*,
+*::before,
+*::after {
+  background-image: url('/img/background.png');
+
+
+}

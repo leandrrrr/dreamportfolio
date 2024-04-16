@@ -43,7 +43,7 @@
 
 <!-- ARROW ARROW ARROW ARROW  -->
 <!-- Flèche vers la gauche -->
-<div class="arrow-hitbox-left"></div>
+<div class="arrow-hitbox-left" onclick="openHobby()"></div>
 <img class="logo-left" src="./img/hobbie-logo.png">
 <div class="arrow-left">
 <svg  viewBox="0 0 512 712" xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd;" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -54,7 +54,7 @@
 </div>
 
 <!-- Flèche vers le right -->
-<div class="arrow-hitbox-right"></div>
+<div class="arrow-hitbox-right" onclick="openProjet()"></div>
 <img class="logo-right" src="./img/portfolio-logo.png">
 <div class="arrow-right">
 <svg  viewBox="0 0 512 712" xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd;" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -133,14 +133,15 @@
 
   <!--  ifram part  -->
 <iframe id="aboutme-iframe" src="aboutme.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe id="hobby-iframe" src="hobby.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe id="projet-iframe" src="projet.html" width="100%" height="600" frameborder="0"></iframe>
+
 
 <!--  button to close ifram  -->
 <button class="delete is-large" id="popupCloser" onclick="closePopup()">
 
 
 </button>
-
-
 
 
 <script>
