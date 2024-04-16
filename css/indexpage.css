@@ -49,14 +49,6 @@
 }
 
 
-  *,
-  *::before,
-  *::after {
-    background-image: url('/img/background.png');
-
-
-  }
-
 .arrow-hitbox-down {
   width: 100%;
   height: 15%;
