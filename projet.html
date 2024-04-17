@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Intégration du script Three.js STL Loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/STLLoader.min.js"></script>
 
 
   <meta name="description" content="">
@@ -47,7 +50,7 @@
   <div class="wave"></div>
 </div>
 
-<div class="arrow-hitbox-up" onclick='moveDiapo(1)'></div>
+<div class="arrow-hitbox-up" onclick='moveDiapo(-1)'></div>
 <div class="arrow-up">
   <svg  viewBox="0 0 512 712" xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd;" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g>
@@ -58,13 +61,15 @@
 <!-- diapo all -->
 <div class="js-tilt diapo-div" data-tilt>
   <!-- diapo1 -->
-  <div id="diapo1" class="diapo diapo-1"><section class="box box-diapo">1</section></div>
+  <div id="diapo1" class="diapo diapo-1"><section class="box box-diapo">LinkHub <img style="width: 20px;height: 20px" src="img/web.png"> <img style="width: 20px;height: 20px" src="img/imac.png"></section>
+    <div id="scene-container"></div>
+  </div>
   <!-- diapo2 -->
-  <div id="diapo2" class="diapo diapo-2"><section class="box box-diapo">2</section></div>
+  <div id="diapo2" class="diapo diapo-2"><section class="box box-diapo">MediaTout <img style="width: 20px;height: 20px" src="img/imac.png"> <img style="width: 20px;height: 20px" src="img/iphone.png"></section></div>
   <!-- diapo3 -->
-  <div id="diapo3" class="diapo diapo-3"><section class="box box-diapo">3</section></div>
+  <div id="diapo3" class="diapo diapo-3"><section class="box box-diapo">Insécurité.com <img style="width: 20px;height: 20px" src="img/web.png"></section></div>
 </div>
-<div class="arrow-hitbox-down" onclick='moveDiapo(-1)'></div>
+<div class="arrow-hitbox-down" onclick='moveDiapo(1)'></div>
 <div class="arrow-down">
   <svg  viewBox="0 0 512 712" xmlns="http://www.w3.org/2000/svg" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd;" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g>
@@ -73,6 +78,47 @@
   </svg>
 </div>
 
+
+<script>
+  // Création de la scène
+  var scene = new THREE.Scene();
+
+  // Création de la caméra
+  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+
+  // Création du rendu
+  var renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha: true pour un fond transparent
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Chargement du modèle STL
+  var loader = new THREE.STLLoader();
+  loader.load('3d/linkhub3d.stl', function (geometry) {
+    // Création du matériau
+    var material = new THREE.MeshNormalMaterial({ transparent: true, opacity: 0.5 });
+
+    // Création du maillage
+    var mesh = new THREE.Mesh(geometry, material);
+
+    // Ajout du maillage à la scène
+    scene.add(mesh);
+  });
+
+  // Animation de rotation du modèle
+  function animate() {
+    requestAnimationFrame(animate);
+    scene.children.forEach(function (object) {
+      object.rotation.x += 0.01;
+      object.rotation.y += 0.01;
+    });
+    renderer.render(scene, camera);
+  }
+
+  // Appel de la fonction d'animation
+  animate();
+
+</script>
 
 <script>
   $(document).ready(function(){
