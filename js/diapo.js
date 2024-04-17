@@ -12,7 +12,10 @@ function initDiapo() {
   diapo3.style.transform = "translateY(70%)";
 }
 
+
 var selectedDiapo = 2;
+
+moveDiapo(1);
 
 function moveDiapo(move) {
   if (move > 1 || move < -1 || move == 0) {
@@ -37,13 +40,22 @@ function moveDiapo(move) {
       break;
   }
 
-  diapoMiddle.style.opacity = "1"; // Met à jour l'opacité de la diapo du milieu
-  diapoTop.style.opacity = "0.4";   // Met à jour l'opacité de la diapo du haut
-  diapoBottom.style.opacity = "0.4"; // Met à jour l'opacité de la diapo du bas
+  diapoMiddle.style.zIndex = "9992"; // Met à jour le z-index de la diapo du milieu
+  diapoTop.style.zIndex = "9991";     // Met à jour le z-index de la diapo du haut
+  diapoBottom.style.zIndex = "9991";  // Met à jour le z-index de la diapo du bas
 
-  diapoMiddle.style.transform = "translateY(-30%)"; // Déplacement de la diapo du milieu
-  diapoTop.style.transform = "translateY(-50%)";    // Déplacement de la diapo du haut
-  diapoBottom.style.transform = "translateY(70%)";  // Déplacement de la diapo du bas
+
+
+
+  setTimeout(function() {
+    diapoMiddle.style.opacity = "1"; // Met à jour l'opacité de la diapo du milieu
+    diapoTop.style.opacity = "0.4";   // Met à jour l'opacité de la diapo du haut
+    diapoBottom.style.opacity = "0.4"; // Met à jour l'opacité de la diapo du bas
+    diapoMiddle.style.transform = "translateY(-20%) scale(1)"; // Déplacement de la diapo du milieu
+    diapoTop.style.transform = "translateY(-50%) scale(0.7)"; // Déplacement de la diapo du haut
+    diapoBottom.style.transform = "translateY(30%) scale(0.7)"; // Déplacement de la diapo du bas
+  }, 10);
+
 
   // Met à jour la valeur de selectedDiapo en fonction du déplacement
   selectedDiapo += move;
