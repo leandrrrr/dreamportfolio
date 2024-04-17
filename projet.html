@@ -8,8 +8,9 @@
   <title></title>
 
 
-  <script src="jquery3.3.1.min.js"></script>
   <script src="js/app.js"></script>
+  <script src='js/diapo.js'></script>
+
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/global.css">
@@ -46,9 +47,88 @@
   <div class="wave"></div>
 </div>
 
+<button class="button" onclick='moveDiapo(1)'>up</button>
+<button class="button" onclick='moveDiapo(-1)'>down</button>
+
+<!-- diapo all -->
+<div class="js-tilt diapo-div" data-tilt>
+  <!-- diapo1 -->
+  <div id="diapo1" class="diapo diapo-1"><section class="box">1</section></div>
+  <!-- diapo2 -->
+  <div id="diapo2" class="diapo diapo-2"><section class="box">2</section></div>
+  <!-- diapo3 -->
+  <div id="diapo3" class="diapo diapo-3"><section class="box">3</section></div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    // Initialize Tilt.js on the tilt-container element
+    $('.js-tilt').tilt({
+      reset: false
+    })
+  });
+
+  initDiapo();
+</script>
+
+<script>
+
+
+  var selectedDiapo = 2;
+
+  moveDiapo(1);
+
+  function moveDiapo(move) {
+    if (move > 1 || move < -1 || move == 0) {
+      console.log("error");
+      return; // Utilisez return pour quitter la fonction
+    }
+    switch (selectedDiapo) {
+      case 1:
+        var diapoTop = document.getElementById("diapo3");
+        var diapoMiddle = document.getElementById("diapo1");
+        var diapoBottom = document.getElementById("diapo2");
+        break;
+      case 2:
+        var diapoTop = document.getElementById("diapo1");
+        var diapoMiddle = document.getElementById("diapo2");
+        var diapoBottom = document.getElementById("diapo3");
+        break;
+      case 3:
+        var diapoTop = document.getElementById("diapo2");
+        var diapoMiddle = document.getElementById("diapo3");
+        var diapoBottom = document.getElementById("diapo1");
+        break;
+    }
+
+    diapoMiddle.style.zIndex = "9992"; // Met à jour le z-index de la diapo du milieu
+    diapoTop.style.zIndex = "9991";     // Met à jour le z-index de la diapo du haut
+    diapoBottom.style.zIndex = "9991";  // Met à jour le z-index de la diapo du bas
 
 
 
 
+    setTimeout(function() {
+      diapoMiddle.style.opacity = "1"; // Met à jour l'opacité de la diapo du milieu
+      diapoTop.style.opacity = "0.4";   // Met à jour l'opacité de la diapo du haut
+      diapoBottom.style.opacity = "0.4"; // Met à jour l'opacité de la diapo du bas
+    diapoMiddle.style.transform = "translateY(-20%) scale(1)"; // Déplacement de la diapo du milieu
+    diapoTop.style.transform = "translateY(-50%) scale(0.7)"; // Déplacement de la diapo du haut
+    diapoBottom.style.transform = "translateY(30%) scale(0.7)"; // Déplacement de la diapo du bas
+
+
+    }, 200);
+
+
+    // Met à jour la valeur de selectedDiapo en fonction du déplacement
+    selectedDiapo += move;
+    if (selectedDiapo > 3) {
+      selectedDiapo = 1;
+    } else if (selectedDiapo < 1) {
+      selectedDiapo = 3;
+    }
+  }
+</script>
 
 </body>
