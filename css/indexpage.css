@@ -39,6 +39,7 @@
   transition: opacity 0.65s ease, transform 0.5s ease;
 }
 
+
 #popupCloser{
   display: none;
   position: fixed; /* Position fixe pour que l'iframe reste toujours visible */

@@ -1,6 +1,8 @@
 
 
+
 function openAboutMe() {
+  var index = document.getElementById("index-page");
   var iframe = document.getElementById("aboutme-iframe");
   var closer = document.getElementById("popupCloser");
 
@@ -12,7 +14,7 @@ function openAboutMe() {
   setTimeout(function() {
     iframe.style.opacity = "1";
     iframe.style.transform = "translateY(0)"; // Réinitialiser la transformation
-  }, 50); // Un délai court pour permettre au navigateur de calculer la transition
+  }, 10); // Un délai court pour permettre au navigateur de calculer la transition
 }
 
 function openHobby() {
