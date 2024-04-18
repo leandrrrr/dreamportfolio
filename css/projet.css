@@ -6,6 +6,15 @@ background-color: #e1bdf5;
 }
 
 
+.linkhub3d{
+  background-color: transparent;
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  width: 50%;
+  height: 50%;
+}
+
 .diapo{
   width: 77%;
   position: fixed; /* Position fixe pour que l'iframe reste toujours visible */

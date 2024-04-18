@@ -9,7 +9,7 @@
   z-index: 9900;
   opacity: 0%;
   transform: translateY(100%); /* Déplacer l'iframe en bas de son conteneur */
-  transition: opacity 0.25s ease, transform 0.1s ease;
+  transition: opacity 0.85s ease, transform 0.6s ease;
 }
 
 #hobby-iframe{
@@ -23,7 +23,7 @@
   z-index: 9900;
   opacity: 0%;
   transform: translateX(-100%); /* Déplacer l'iframe en bas de son conteneur */
-  transition: opacity 0.25s ease, transform 0.1s ease;
+  transition: opacity 0.85s ease, transform 0.6s ease;
 }
 #projet-iframe{
   display: none;
@@ -36,7 +36,7 @@
   z-index: 9900;
   opacity: 0%;
   transform: translateX(100%); /* Déplacer l'iframe en bas de son conteneur */
-  transition: opacity 0.25s ease, transform 0.1s ease;
+  transition: opacity 0.85s ease, transform 0.6s ease;
 }
 
 #popupCloser{

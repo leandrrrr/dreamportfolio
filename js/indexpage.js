@@ -12,8 +12,7 @@ function openAboutMe() {
   setTimeout(function() {
     iframe.style.opacity = "1";
     iframe.style.transform = "translateY(0)"; // Réinitialiser la transformation
-  }, 120); // Un délai court pour permettre au navigateur de calculer la transition
-
+  }, 50); // Un délai court pour permettre au navigateur de calculer la transition
 }
 
 function openHobby() {
