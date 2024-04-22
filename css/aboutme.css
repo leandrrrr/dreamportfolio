@@ -65,7 +65,7 @@ max-width: 45%;
 }
 
 .betweenS-distH{
-  width: 50px;
+  width: 1000px;
   height: 100%;
 }
 .betweenL-distH{
@@ -78,11 +78,11 @@ max-width: 45%;
   height: 100%;
 }
 .blockS-H{
-  width: 800px;
+  width: 2800px;
   height: 100%;
 }
 .blockL-H{
-  width: 800px;
+  width: 2800px;
   height: 100%;
 }
 .title-block{
