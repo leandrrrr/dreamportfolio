@@ -16,7 +16,7 @@ max-width: 45%;
 }
 
 .underInnerH {
-    margin-top: 50%   /* Augmente la marge en haut de la boîte de 30% de la hauteur de son conteneur (.sectionH) */
+    margin-top: 58%   /* Augmente la marge en haut de la boîte de % de la hauteur de son conteneur (.sectionH) */
 }
 
 .sectionH {
@@ -51,28 +51,58 @@ max-width: 45%;
 }
 
 .start-distH{
-  width: 2500px;
+  width: 100px;
+  height: 100%;
 }
 .endstart-distH{
-  width: 400px;
+  width: 100px;
+  height: 100%;
 }
+
 .end-distH{
-  width: 200px;
+  width: 100px;
+  height: 100%;
 }
 
 .betweenS-distH{
-  width: 100px;
+  width: 50px;
+  height: 100%;
 }
 .betweenL-distH{
-  width: 200px;
+  width: 350px;
+  height: 100%;
 }
 
 .start-blockH{
-  width: 200px;
+  width: 100px;
+  height: 100%;
 }
 .blockS-H{
-  width: 200px;
+  width: 800px;
+  height: 100%;
 }
 .blockL-H{
-  width: 200px;
+  width: 800px;
+  height: 100%;
 }
+.title-block{
+  font-size: 130%;
+}
+
+
+@keyframes flotter {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.flotter {
+  animation: flotter 2s ease-in-out infinite;
+}
+
