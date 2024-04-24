@@ -6,6 +6,9 @@
   margin-right: 10%;
 }
 
+.grid {
+  --bulma-grid-gap: 1.30rem;
+}
 
 /* REGION blur de l'image + text */
 .containerBlur {
