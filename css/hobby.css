@@ -2,14 +2,30 @@
   width: 100%;
 }
 .hero-hobby{
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
 /* REGION blur de l'image + text */
 .containerBlur {
-  position: relative;
+  top:50%;
+  left: 50%; /* Aligner le texte à gauche */
+  transform: translate(-50%,-50%);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: .1s ease-in-out;
+  -o-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  opacity: 0;
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  border-radius: 4px;
+  background: linear-gradient(rgb(0 0 0 / 0%), rgb(106 105 255 / 40%));
+  overflow: hidden;
 }
 
 /* Image normale */
@@ -21,23 +37,65 @@
 
 /* Texte superposé */
 .textBlur {
+  z-index: 2;
   position: absolute;
-  top: 20%;
-  left: 5%;
-  color: white;
+  top: 50%;
+  left: 50%; /* Aligner le texte à gauche */
+  transform: translate(-50%,-50%);
   opacity: 0;
-  transition: opacity 0.5s; /* Animation de transition pour une transition plus douce */
+  transition: opacity 0.5s, transform 1s ease-in-out; /* Animation de transition pour une transition plus douce */
 }
 
 /* Au survol de l'image */
-.containerBlur:hover .imageBlur {
-  filter: blur(5px); /* Applique un flou de 5 pixels */
+.containerBlur-hitbox:hover .containerBlur{
+  opacity: 1;
+
 }
 
 /* Au survol de l'image */
-.containerBlur:hover .textBlur {
+.containerBlur-hitbox:hover .textBlur{
   opacity: 1; /* Fait apparaître le texte */
 }
 
+.card-blur-scale:hover {
+  transform: scale(0.95);
+}
+.card-blur-scale{
+  transition: filter 0.2s, transform 0.2s ease-in-out;
+}
 
+@container bulma-fixed-grid (min-width: 769px) {
+  .fixed-grid.has-auto-count .grid {
+    --bulma-grid-column-count: 4 !important;
+  }
+}
+
+@container bulma-fixed-grid (min-width: 1408px) {
+  .fixed-grid.has-auto-count .grid {
+    --bulma-grid-column-count: 8 !important;
+  }
+}
+.undertext-blur{
+  color: white;
+  opacity: 0.6;
+  font-size: 12px;
+  margin-bottom: 9px;
+  white-space: nowrap;
+}
+
+.link-blur{
+  color: white;
+  opacity: 0.9;
+  font-size: 14px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.title-blur{
+  color: white;
+  opacity: 0.9;
+  font-size: 22px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
 /* ENDREGION blur de l'image + text */
