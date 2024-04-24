@@ -5,3 +5,39 @@
   margin-left: 20%;
   margin-right: 20%;
 }
+
+
+/* REGION blur de l'image + text */
+.containerBlur {
+  position: relative;
+}
+
+/* Image normale */
+.imageBlur {
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s; /* Animation de transition pour une transition plus douce */
+}
+
+/* Texte superposé */
+.textBlur {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s; /* Animation de transition pour une transition plus douce */
+}
+
+/* Au survol de l'image */
+.containerBlur:hover .imageBlur {
+  filter: blur(5px); /* Applique un flou de 5 pixels */
+}
+
+/* Au survol de l'image */
+.containerBlur:hover .textBlur {
+  opacity: 1; /* Fait apparaître le texte */
+}
+
+
+/* ENDREGION blur de l'image + text */
