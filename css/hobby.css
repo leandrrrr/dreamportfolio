@@ -61,7 +61,7 @@
 }
 
 .card-blur-scale:hover {
-  transform: scale(0.96);
+  transform: scale(0.96) ;
 }
 .card-blur-scale{
   transition: filter 0.2s, transform 0.2s ease-in-out;
