@@ -17,7 +17,7 @@ background-color: #e1bdf5;
 
 .diapo{
   width: 77%;
-  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  position: fixed; 
   left: 10%;
   height: 70%;
   z-index: 9992;
@@ -32,7 +32,7 @@ background-color: #e1bdf5;
 .diapo-div{
   top:0;
   width: 80%;
-  position: fixed; /* Position fixe pour que l'iframe reste toujours visible */
+  position: fixed; 
   left: 20%;
   height: 100%;
   z-index: 9991;

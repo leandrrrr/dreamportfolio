@@ -184,7 +184,7 @@ textarea {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 *{
-  font-family: Oxanium;
+  font-family: Oxanium, Poppins, Verdana, Geneva, Tahoma, sans-serif;
   cursor: url('/img/cursor-2.png'), auto !important;
 }
 body{

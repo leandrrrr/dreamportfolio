@@ -9,14 +9,6 @@ html, body {
 }
 
 
-
-
-
-
-
-
-
-
 .container {
   width: 100%;
   height: 100%;
@@ -34,7 +26,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Assurez-vous que l'arrière-plan reste derrière le contenu */
+  z-index: -1; 
 }
 
 
@@ -51,12 +43,10 @@ table {
 hr {
   display: none;
 }
+
 #footer {
   display: none;
 }
-
-
-
 
 
 a + a {
@@ -66,7 +56,7 @@ a + a {
   display: flex;
   align-items: center;
   color:white;
-  font-family: oxanium;
+  font-family: oxanium, Poppins, Verdana, Geneva, Tahoma, sans-serif;
 
 
 }

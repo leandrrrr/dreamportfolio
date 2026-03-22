@@ -1,6 +1,7 @@
 .hobby-card{
   width: 100%;
 }
+
 .hero-hobby{
   margin-left: 10%;
   margin-right: 10%;
@@ -27,7 +28,7 @@
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   backdrop-filter: blur(16px) saturate(160%);
   border-radius: 4px;
-  background: linear-gradient(rgb(0 0 0 / 0%), rgb(106 105 255 / 40%));
+  background: linear-gradient(rgba(248, 52, 255, 0.129), rgba(97, 77, 244, 0.472));
   overflow: hidden;
 }
 
